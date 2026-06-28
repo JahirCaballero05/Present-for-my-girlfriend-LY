@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Usted, Mi Amor 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================
+     🎵 AUDIO PLAYER (invisible, reproducción automática)
+     CÓMO CAMBIAR LA MÚSICA: Reemplaza "assets/music.mp3" con tu archivo de música
+     ============================================ -->
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mp3">
+</audio>
+
+<!-- Control de música -->
+<button class="music-btn" id="musicBtn" title="Música">
+  <span class="music-icon">♫</span>
+</button>
+
+<!-- ============================================
+     SECCIÓN 1: PANTALLA DE BIENVENIDA
+     CÓMO PERSONALIZAR: Cambia "Mi Amor" y el texto por el nombre de tu pareja
+     ============================================ -->
+<section id="welcome" class="section welcome-section">
+  <div class="particles" id="particles"></div>
+  <div class="welcome-content">
+    <p class="welcome-pre fade-in-1">Hoy es un día muy especial...</p>
+    <h1 class="welcome-title fade-in-2">
+      <span class="typewriter" id="typewriter"></span>
+    </h1>
+    <p class="welcome-sub fade-in-3">
+      Hay personas que llegan a tu vida y la convierten en algo tan hermoso<br>
+      que no puedes imaginar cómo era antes sin ellas.
+    </p>
+    <div class="welcome-date fade-in-4">
+      <!-- CONTADOR DE TIEMPO JUNTOS -->
+      <div class="counter-box">
+        <div class="counter-title">Llevamos juntos</div>
+        <div class="counter-display">
+          <div class="counter-unit"><span id="cnt-years">0</span><small>años</small></div>
+          <div class="counter-unit"><span id="cnt-months">0</span><small>meses</small></div>
+          <div class="counter-unit"><span id="cnt-days">0</span><small>días</small></div>
+          <div class="counter-unit"><span id="cnt-hours">0</span><small>horas</small></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-enter fade-in-5" onclick="scrollToNext('reasons')">
+      Comenzar este viaje ↓
+    </button>
+  </div>
+  <div class="scroll-hint">✦ Desplázate para descubrir más ✦</div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 2: RAZONES POR LAS QUE TE AMO
+     CÓMO PERSONALIZAR: Cambia cada razón en el array de reasons.js (o aquí directamente)
+     ============================================ -->
+<section id="reasons" class="section reasons-section">
+  <div class="section-inner">
+    <div class="section-label">Con todo mi corazón</div>
+    <h2 class="section-title">Razones por las que la amo</h2>
+    <p class="section-subtitle">Abra cada tarjeta para descubrir un secreto ✦</p>
+    <div class="reasons-grid" id="reasonsGrid">
+      <!-- Las tarjetas se generan con JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 3: GALERÍA DE FOTOS
+     CÓMO PERSONALIZAR: Agrega tus fotos en la carpeta "assets/photos/"
+     y cambia los nombres de archivo abajo
+     ============================================ -->
+<section id="gallery" class="section gallery-section">
+  <div class="section-inner">
+    <div class="section-label">Nuestros momentos</div>
+    <h2 class="section-title">Mi álbum de recuerdos</h2>
+    <p class="section-subtitle">Cada foto guarda un pedacito de nuestro amor y de la mujer que me encanta</p>
+    <p class="section-subtitle">!!Haga Click En Cada Foto!!</p>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- INSTRUCCIONES PARA AGREGAR FOTOS:
+           1. Crea una carpeta llamada "assets/photos/"
+           2. Agrega tus fotos con estos nombres: foto1.jpg, foto2.jpg, etc.
+           3. O cambia los nombres abajo por los nombres reales de tus fotos
+           Mientras tanto, se mostrarán tarjetas de ejemplo con ♡ -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 4: CARTA DE AMOR
+     CÓMO PERSONALIZAR: Edita el texto dentro de <div class="letter-body">
+     ============================================ -->
+<section id="letter" class="section letter-section">
+  <div class="section-inner">
+    <div class="section-label">Mis palabras para usted</div>
+    <h2 class="section-title">Una carta de amor</h2>
+    <div class="letter-envelope" id="letterEnvelope">
+      <div class="envelope-front" onclick="openLetter()">
+        <div class="envelope-seal">❤</div>
+        <p class="envelope-text">Toca para abrir mi carta</p>
+      </div>
+      <div class="letter-paper" id="letterPaper">
+        <div class="letter-header">
+          <p class="letter-date" id="letterDate"></p>
+          <div class="letter-decoration">✦ ✦ ✦</div>
+        </div>
+        <div class="letter-body">
+          <!-- ✏️ EDITA ESTA CARTA CON TUS PROPIAS PALABRAS -->
+          <p class="letter-salute">Mi amor más hermoso,</p>
+
+          <p>Hoy cumple años la mujer que convirtió mi mundo en un lugar más cálido.</p>
+
+          <p>Y aunque existan miles de kilómetros entre nosotros, aunque mi voz tenga que cruzar pantallas y mis manos todavía no puedan encontrar las tuyas cada mañana, jamás he sentido a alguien tan cerca de mi alma como a usted.</p>
+
+          <p>A veces me pregunto cómo fue posible que dos vidas tan lejanas terminaran encontrándose de esta manera tan absurda y tan perfecta. Porque desde que llegó a mi vida, algo dentro de mí aprendió a florecer. Los días comenzaron a sentirse distintos, las noches menos vacías, y mi corazón —que antes caminaba sin rumbo— encontró finalmente un lugar donde quedarse.</p>
+
+          <p>Usted.</p>
+
+          <p>No sé si entiende lo profundamente que la amo. No sé si alguna vez lograré explicarlo de la forma correcta. Porque lo que siento por usted no cabe dentro de palabras normales; vive en los pequeños momentos, en las madrugadas compartidas, en las llamadas hasta quedarnos dormidos, en la manera en que mi pecho se calma apenas escucho su voz.</p>
+
+          <p>La amo en todas sus formas, la amo cuando ríe hasta quedarse sin aire, la amo cuando duda de sí misma y aun así sigue adelante, La amo en sus partes más dulces y también en aquellas que intenta esconderle al mundo.</p>
+
+          <p>Y quizás lo más hermoso de todo es que nunca tuve que esforzarme para enamorarme de usted. Mi corazón simplemente la reconoció. Como si hubiera pasado toda mi vida buscándola sin saberlo.</p>
+
+          <p>Hoy, en su cumpleaños, hay tantas cosas que quisiera darle. Me gustaría poder abrazarla fuerte, besar su frente, tomar su mano y quedarme mirándola como alguien que por fin encontró aquello que no sabía que necesitaba para ser feliz.</p>
+
+          <p>Pero mientras llega el día en que pueda amarla sin kilómetros de por medio, quiero que esta carta haga algo por mí: que la abrace donde yo todavía no puedo.</p>
+
+          <p>Gracias por existir, gracias por elegirme, gracias por quedarse conmigo incluso en la distancia, incluso en los días difíciles, incluso cuando el mundo parece demasiado pesado.</p>
+
+          <p>Y sobre todo, gracias por enseñarme que el amor verdadero sí existe, porque desde que usted llegó a mi vida, amar dejó de ser solamente una palabra bonita y se convirtió en la forma más sincera en la que late mi corazón.</p>
+ 
+          <p>Así que hoy, en el día en que nació la persona más importante de mi vida, solo quiero pedirle una cosa:</p>
+
+          <p>Nunca deje de mirarse con ternura. Nunca olvide lo increíblemente valiosa, hermosa y maravillosa que es. Porque si pudiera verla con mis ojos, entendería por qué hay un hombre aquí que la ama con una intensidad que ni el tiempo, ni la distancia, ni el mundo entero podrían arrancarle del pecho.</p>
+
+          <p>Feliz cumpleaños, mi amor.</p>
+
+          <p>Y ojalá algún día, cuando la vida nos permita finalmente estar frente a frente, pueda leer esta carta mientras descansa entre mis brazos, para que entienda que desde mucho antes de tocar sus manos… yo ya había hecho de usted mi hogar.</p>
+      
+          <p class="letter-closing">Con todo mi amor,<br><em>El amor de su vida 💕</em></p>
+          <!-- ✏️ FIN DE LA CARTA EDITABLE -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 5: LÍNEA DEL TIEMPO
+     CÓMO PERSONALIZAR: Edita el array "timeline" en script.js
+     ============================================ -->
+<section id="timeline" class="section timeline-section">
+  <div class="section-inner">
+    <div class="section-label">Nuestra historia</div>
+    <h2 class="section-title">El camino que hemos recorrido</h2>
+    <div class="timeline" id="timelineContainer">
+      <!-- Generado por JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 6: MENSAJES SORPRESA (Mini juego)
+     ============================================ -->
+<section id="surprises" class="section surprises-section">
+  <div class="section-inner">
+    <div class="section-label">Para usted</div>
+    <h2 class="section-title">Mensajes secretos</h2>
+    <p class="section-subtitle">Abra cada sobre para descubrir algo que quiero decirle</p>
+    <div class="surprises-grid" id="surprisesGrid">
+      <!-- Generado por JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 7: MINI JUEGO ROMÁNTICO
+     ============================================ -->
+<section id="game" class="section game-section">
+  <div class="section-inner">
+    <div class="section-label">Un juego para nosotros</div>
+    <h2 class="section-title">¿Cuánto me conoces?</h2>
+    <p class="section-subtitle">Responda y gana un premio💝</p>
+    <div class="game-container" id="gameContainer">
+      <!-- Generado por JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN 8: FINAL EMOTIVO
+     ============================================ -->
+<section id="finale" class="section finale-section">
+  <div class="particles" id="particles2"></div>
+  <div class="finale-content">
+    <div class="finale-symbol">✦</div>
+    <h2 class="finale-title">Gracias por existir</h2>
+    <p class="finale-text">
+      En un universo de posibilidades infinitas,<br>
+      el cosmos nos puso en el mismo camino.<br>
+      Y eso es lo más mágico que me ha pasado.
+    </p>
+    <div class="finale-hearts" id="finaleHearts"></div>
+    <p class="finale-sub">Feliz cumpleaños, mi amor 🎂</p>
+    <div class="finale-name">Con amor, desde donde sea que estemos, siempre juntos, la amo hoy, mañana y siempre, del amor de su vida, para el amor de mi vida 💕
+      Te amo preciosa ❤️
+    </div>
+    <button class="btn-restart" onclick="launchFireworks()">✨ Lanzar confeti ✨</button>
+  </div>
+</section>
+
+<!-- MODAL para fotos en grande -->
+<div class="modal-overlay" id="photoModal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modalImg" src="" alt="">
+    <p id="modalCaption"></p>
+  </div>
+</div>
+
+<!-- Corazones flotantes permanentes -->
+<div class="floating-hearts" id="floatingHearts"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
