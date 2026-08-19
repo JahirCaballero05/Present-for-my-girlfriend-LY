@@ -21,10 +21,44 @@ Abre el archivo `script.js` y edita las variables al inicio:
 2. Renómbralo como `music.mp3`
 3. ¡Listo! La página reproducirá la música automáticamente
 
-### 4. Personalizar la carta de amor
-Abre `index.html` y busca la sección que dice:
-`<!-- ✏️ EDITA ESTA CARTA CON TUS PROPIAS PALABRAS -->`
-Reemplaza el texto entre esas marcas con tu propia carta.
+### 4. Agregar más cartas al buzón
+Ahora las cartas se administran desde `script.js`, en el array `LOVE_LETTERS`. No edites el HTML para añadir cartas nuevas.
+
+Para crear otra carta:
+1. Abre `script.js`.
+2. Busca `const LOVE_LETTERS = [`.
+3. Copia el bloque de una carta existente, pégalo debajo y cambia estos campos:
+   - `id` → Debe ser único, sin espacios. Ejemplo: `"aniversario-2026"`.
+   - `fecha` → Texto que se verá en el sobre. Ejemplo: `"31 de diciembre de 2026"`.
+   - `titulo` → Nombre que aparecerá en el buzón y en la carta.
+   - `contenido` → El texto de la carta, escrito en párrafos HTML (`<p>...</p>`).
+4. Importante: cada carta debe separarse con una coma `,`.
+
+Ejemplo:
+```js
+const LOVE_LETTERS = [
+  {
+    id: "cumpleanos-2026",
+    fecha: "14 de agosto de 2026",
+    titulo: "Una carta de amor",
+    contenido: `
+      <p class="letter-salute">Mi amor más hermoso,</p>
+      <p>Texto de la primera carta...</p>
+      <p class="letter-closing">Con todo mi amor,<br><em>El amor de su vida 💕</em></p>
+    `
+  },
+  {
+    id: "aniversario-2026",
+    fecha: "31 de diciembre de 2026",
+    titulo: "Nuestro aniversario",
+    contenido: `
+      <p class="letter-salute">Mi vida,</p>
+      <p>Aquí escribe la nueva carta...</p>
+      <p class="letter-closing">Siempre suyo,<br><em>Su amor 💕</em></p>
+    `
+  }
+];
+```
 
 ## Cómo abrir la página en tu computadora
 Solo abre el archivo `index.html` con tu navegador (Chrome, Firefox, etc.)

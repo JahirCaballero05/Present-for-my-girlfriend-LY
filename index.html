@@ -96,60 +96,43 @@
 </section>
 
 <!-- ============================================
-     SECCIÓN 4: CARTA DE AMOR
-     CÓMO PERSONALIZAR: Edita el texto dentro de <div class="letter-body">
+  SECCIÓN 4: BUZÓN DE CARTAS DE AMOR
+     CÓMO PERSONALIZAR: Edita el array LOVE_LETTERS en script.js
+     para agregar nuevas cartas sin tocar este HTML.
      ============================================ -->
 <section id="letter" class="section letter-section">
   <div class="section-inner">
     <div class="section-label">Mis palabras para usted</div>
-    <h2 class="section-title">Una carta de amor</h2>
-    <div class="letter-envelope" id="letterEnvelope">
-      <div class="envelope-front" onclick="openLetter()">
-        <div class="envelope-seal">❤</div>
+<h2 class="section-title">Nuestro buzón de amor</h2>
+
+    <div class="letter-mailbox" id="letterMailbox" aria-live="polite">
+      <div class="mailbox-intro reveal">
+        <span class="mailbox-kicker">Archivador de momentos</span>
+        <h3>Mis Pensamientos Solo Son Suyos</h3>
+      </div>
+      <div class="mailbox-grid" id="mailboxGrid">
+        <!-- Las cartas se generan con JavaScript desde LOVE_LETTERS -->
+      </div>
+    </div>
+
+    <div class="letter-envelope" id="letterEnvelope" hidden>
+      <button class="letter-back-btn" type="button" onclick="returnToMailbox()">← Volver al buzón</button>
+      <div class="envelope-front" onclick="openLetter()" role="button" tabindex="0" aria-label="Abrir carta seleccionada">
+        <div class="envelope-selected-date" id="envelopeSelectedDate"></div>
+    <div class="envelope-seal">❤</div>
         <p class="envelope-text">Toca para abrir mi carta</p>
+         <p class="envelope-selected-title" id="envelopeSelectedTitle"></p>
       </div>
       <div class="letter-paper" id="letterPaper">
         <div class="letter-header">
           <p class="letter-date" id="letterDate"></p>
+          <h3 class="letter-paper-title" id="letterPaperTitle"></h3>
           <div class="letter-decoration">✦ ✦ ✦</div>
         </div>
-        <div class="letter-body">
-          <!-- ✏️ EDITA ESTA CARTA CON TUS PROPIAS PALABRAS -->
-          <p class="letter-salute">Mi amor más hermoso,</p>
-
-          <p>Hoy cumple años la mujer que convirtió mi mundo en un lugar más cálido.</p>
-
-          <p>Y aunque existan miles de kilómetros entre nosotros, aunque mi voz tenga que cruzar pantallas y mis manos todavía no puedan encontrar las tuyas cada mañana, jamás he sentido a alguien tan cerca de mi alma como a usted.</p>
-
-          <p>A veces me pregunto cómo fue posible que dos vidas tan lejanas terminaran encontrándose de esta manera tan absurda y tan perfecta. Porque desde que llegó a mi vida, algo dentro de mí aprendió a florecer. Los días comenzaron a sentirse distintos, las noches menos vacías, y mi corazón —que antes caminaba sin rumbo— encontró finalmente un lugar donde quedarse.</p>
-
-          <p>Usted.</p>
-
-          <p>No sé si entiende lo profundamente que la amo. No sé si alguna vez lograré explicarlo de la forma correcta. Porque lo que siento por usted no cabe dentro de palabras normales; vive en los pequeños momentos, en las madrugadas compartidas, en las llamadas hasta quedarnos dormidos, en la manera en que mi pecho se calma apenas escucho su voz.</p>
-
-          <p>La amo en todas sus formas, la amo cuando ríe hasta quedarse sin aire, la amo cuando duda de sí misma y aun así sigue adelante, La amo en sus partes más dulces y también en aquellas que intenta esconderle al mundo.</p>
-
-          <p>Y quizás lo más hermoso de todo es que nunca tuve que esforzarme para enamorarme de usted. Mi corazón simplemente la reconoció. Como si hubiera pasado toda mi vida buscándola sin saberlo.</p>
-
-          <p>Hoy, en su cumpleaños, hay tantas cosas que quisiera darle. Me gustaría poder abrazarla fuerte, besar su frente, tomar su mano y quedarme mirándola como alguien que por fin encontró aquello que no sabía que necesitaba para ser feliz.</p>
-
-          <p>Pero mientras llega el día en que pueda amarla sin kilómetros de por medio, quiero que esta carta haga algo por mí: que la abrace donde yo todavía no puedo.</p>
-
-          <p>Gracias por existir, gracias por elegirme, gracias por quedarse conmigo incluso en la distancia, incluso en los días difíciles, incluso cuando el mundo parece demasiado pesado.</p>
-
-          <p>Y sobre todo, gracias por enseñarme que el amor verdadero sí existe, porque desde que usted llegó a mi vida, amar dejó de ser solamente una palabra bonita y se convirtió en la forma más sincera en la que late mi corazón.</p>
- 
-          <p>Así que hoy, en el día en que nació la persona más importante de mi vida, solo quiero pedirle una cosa:</p>
-
-          <p>Nunca deje de mirarse con ternura. Nunca olvide lo increíblemente valiosa, hermosa y maravillosa que es. Porque si pudiera verla con mis ojos, entendería por qué hay un hombre aquí que la ama con una intensidad que ni el tiempo, ni la distancia, ni el mundo entero podrían arrancarle del pecho.</p>
-
-          <p>Feliz cumpleaños, mi amor.</p>
-
-          <p>Y ojalá algún día, cuando la vida nos permita finalmente estar frente a frente, pueda leer esta carta mientras descansa entre mis brazos, para que entienda que desde mucho antes de tocar sus manos… yo ya había hecho de usted mi hogar.</p>
-      
-          <p class="letter-closing">Con todo mi amor,<br><em>El amor de su vida 💕</em></p>
-          <!-- ✏️ FIN DE LA CARTA EDITABLE -->
-        </div>
+<div class="letter-body" id="letterBody">
+          <!-- El contenido de la carta seleccionada se genera con JavaScript -->
+      </div>
+              <button class="letter-close-btn" type="button" onclick="returnToMailbox()">Cerrar carta y volver al buzón</button>
       </div>
     </div>
   </div>
