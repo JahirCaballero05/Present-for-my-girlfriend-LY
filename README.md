@@ -1,5 +1,4 @@
 ///Actualizacion 07.9.26 original
-
 # 💕 Página Romántica de Cumpleaños
 
 ## Cómo usar esta página
