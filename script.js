@@ -98,6 +98,86 @@ const PHOTOS = [
   { src: "assets/photos/foto8.jpg",}
 ];
 
+// ================================================
+// ✏️ PERSONALIZA ESTO: Cartas del buzón
+// Para agregar una nueva carta, copia un objeto y cambia id, fecha,
+// titulo y contenido. El contenido acepta párrafos en HTML sencillo.
+// ================================================
+const LOVE_LETTERS = [
+  {
+    id: "cumpleanos-2026",
+    fecha: "20 de Mayo de 2026",
+    titulo: "Feliz Cumpleaños Mi Amor",
+    contenido: `
+      <p class="letter-salute">Mi amor más hermoso,</p>
+
+      <p>Hoy cumple años la mujer que convirtió mi mundo en un lugar más cálido.</p>
+
+      <p>Y aunque existan miles de kilómetros entre nosotros, aunque mi voz tenga que cruzar pantallas y mis manos todavía no puedan encontrar las tuyas cada mañana, jamás he sentido a alguien tan cerca de mi alma como a usted.</p>
+
+      <p>A veces me pregunto cómo fue posible que dos vidas tan lejanas terminaran encontrándose de esta manera tan absurda y tan perfecta. Porque desde que llegó a mi vida, algo dentro de mí aprendió a florecer. Los días comenzaron a sentirse distintos, las noches menos vacías, y mi corazón —que antes caminaba sin rumbo— encontró finalmente un lugar donde quedarse.</p>
+
+      <p>Usted.</p>
+
+      <p>No sé si entiende lo profundamente que la amo. No sé si alguna vez lograré explicarlo de la forma correcta. Porque lo que siento por usted no cabe dentro de palabras normales; vive en los pequeños momentos, en las madrugadas compartidas, en las llamadas hasta quedarnos dormidos, en la manera en que mi pecho se calma apenas escucho su voz.</p>
+
+      <p>La amo en todas sus formas, la amo cuando ríe hasta quedarse sin aire, la amo cuando duda de sí misma y aun así sigue adelante, La amo en sus partes más dulces y también en aquellas que intenta esconderle al mundo.</p>
+
+      <p>Y quizás lo más hermoso de todo es que nunca tuve que esforzarme para enamorarme de usted. Mi corazón simplemente la reconoció. Como si hubiera pasado toda mi vida buscándola sin saberlo.</p>
+
+      <p>Hoy, en su cumpleaños, hay tantas cosas que quisiera darle. Me gustaría poder abrazarla fuerte, besar su frente, tomar su mano y quedarme mirándola como alguien que por fin encontró aquello que no sabía que necesitaba para ser feliz.</p>
+
+      <p>Pero mientras llega el día en que pueda amarla sin kilómetros de por medio, quiero que esta carta haga algo por mí: que la abrace donde yo todavía no puedo.</p>
+
+      <p>Gracias por existir, gracias por elegirme, gracias por quedarse conmigo incluso en la distancia, incluso en los días difíciles, incluso cuando el mundo parece demasiado pesado.</p>
+
+      <p>Y sobre todo, gracias por enseñarme que el amor verdadero sí existe, porque desde que usted llegó a mi vida, amar dejó de ser solamente una palabra bonita y se convirtió en la forma más sincera en la que late mi corazón.</p>
+
+      <p>Así que hoy, en el día en que nació la persona más importante de mi vida, solo quiero pedirle una cosa:</p>
+
+      <p>Nunca deje de mirarse con ternura. Nunca olvide lo increíblemente valiosa, hermosa y maravillosa que es. Porque si pudiera verla con mis ojos, entendería por qué hay un hombre aquí que la ama con una intensidad que ni el tiempo, ni la distancia, ni el mundo entero podrían arrancarle del pecho.</p>
+
+      <p>Feliz cumpleaños, mi amor.</p>
+
+      <p>Y ojalá algún día, cuando la vida nos permita finalmente estar frente a frente, pueda leer esta carta mientras descansa entre mis brazos, para que entienda que desde mucho antes de tocar sus manos… yo ya había hecho de usted mi hogar.</p>
+
+      <p class="letter-closing">Con todo mi amor,<br><em>El amor de su vida 💕</em></p>
+    `
+  },
+  {
+    id: "Hoy_Te_Amo_Mas_Que_Ayer",
+    fecha: "5 de Septiembre de 2026",
+    titulo: "TE AMO MAS",
+    contenido: `
+      <p class="letter-salute">Mi amor,</p>
+
+<p>Hay cosas que uno siente y que, por más que intente explicarlas, siempre terminan siendo más grandes que cualquier palabra. Lo que siento por usted es una de ellas.</p>
+
+<p>No sé exactamente en qué momento dejó de ser simplemente alguien a quien quería y se convirtió en una parte de mí. Solo sé que sucedió. Un día estaba viviendo mi vida y, sin darme cuenta, empecé a encontrarla en todas partes: en mis pensamientos, en mis noches, en las cosas que quería contarle, en las canciones que escuchaba, en las ganas de compartir hasta los momentos más insignificantes de mi día. Y entonces entendí que me había enamorado de usted.</p>
+
+<p>Pero no de una versión perfecta de usted. Me enamoré de usted completa. De lo que conozco y de lo que todavía me falta conocer. De su forma de reír, de su manera de pensar, de sus silencios, de sus contradicciones, de todo aquello que la hace ser exactamente quien es. Y eso es lo que más amo: que no necesito imaginar cómo sería usted para quererla, porque ya existe frente a mí y me basta con conocerla cada día un poco más para volver a enamorarme.</p>
+
+<p>A veces pienso en los kilómetros que existen entre nosotros y me parece absurdo que tanta distancia pueda existir entre dos personas que se sienten tan cerca. Pero entonces recuerdo nuestras noches, nuestras conversaciones, nuestras risas, la manera en que nos acompañamos incluso cuando no podemos tocarnos, y entiendo que hay distancias que solamente existen en un mapa. Porque usted está conmigo.</p>
+
+<p>Está en mis noches cuando es la última persona que quiero ver antes de cerrar los ojos. Está en mis mañanas cuando es de las primeras personas que quiero encontrar. Está en cada pequeño momento que se ha vuelto especial simplemente porque puedo compartirlo con usted. Y quizá nunca pueda explicarle completamente lo que significa eso para mí, pero quiero que sepa algo: yo no quiero solamente los momentos bonitos de usted.</p>
+
+<p>Quiero conocerla cuando esté feliz y cuando no sepa qué sentir. Quiero escucharla cuando tenga algo que decir y respetar su silencio cuando no quiera hablar. Quiero conocer las partes de usted que todavía no conozco, no para cambiarlas, sino porque también son suyas. No quiero un amor perfecto, quiero el nuestro. Ese que se construye poco a poco, que aprende, que se equivoca, que vuelve a intentarlo, que se elige incluso cuando las cosas no son fáciles.</p>
+
+<p>Porque si algo tengo claro es que yo la elegiría. La elegiría entre millones de personas. En otro tiempo, en otra vida. Y si alguna vez vuelve a preguntarse por qué me enamoré de usted, probablemente nunca tenga una respuesta suficientemente buena, porque no fue una sola cosa: fue usted entera.</p>
+
+<p>Fue la forma en que llegó a mi vida y, sin pedir permiso, comenzó a hacerla suya. Fue la manera en que me hizo querer compartir mi mundo con alguien y descubrir que podía sentirme completamente yo mismo junto a otra persona. Fue usted, y todavía lo es. Por eso, cuando le digo que la amo, no quiero que lo escuche como una frase que digo porque es bonita o porque ya forma parte de nuestras conversaciones.</p>
+
+<p>Quiero que entienda que cuando digo "te amo", estoy hablando de todo esto: de mi presente, de mis ganas de seguir conociéndola y de todo lo que todavía nos falta vivir. De las noches que aún nos quedan por compartir, de los abrazos que todavía no hemos podido darnos y de todos los lugares en los que algún día quiero estar a su lado.</p>
+
+<p>La amo con todo lo que soy, mi amor. Y si algún día las palabras se me quedan cortas, mire simplemente la forma en que la sigo eligiendo. Ahí estará todo lo que nunca supe decirle.</p>
+
+<p class="letter-closing">Con todo mi corazón,<br><em>El hombre que tuvo la suerte de encontrarla ❤️</em></p>
+
+
+    `
+  }
+];
+
 
 // ================================================
 // ✏️ PERSONALIZA ESTO: Línea del tiempo
@@ -243,6 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimeline();
   initSurprises();
   initGame();
+  initLetters();
   initFloatingHearts();
   initParticles();
   initScrollReveal();
@@ -392,22 +473,112 @@ function closeModal() {
   document.getElementById('photoModal').classList.remove('active');
 }
 
-// ── CARTA ──
+// ── BUZÓN Y CARTAS ──
+let selectedLetter = LOVE_LETTERS[0] || null;
+
+function initLetters() {
+  const grid = document.getElementById('mailboxGrid');
+  if (!grid) return;
+
+  grid.innerHTML = LOVE_LETTERS.map((letter, index) => `
+    <button class="mailbox-card reveal" type="button" onclick="selectLetter('${letter.id}')">
+      <span class="mailbox-card-number">${String(index + 1).padStart(2, '0')}</span>
+      <span class="mailbox-card-icon">💌</span>
+      <span class="mailbox-card-date">${letter.fecha}</span>
+      <span class="mailbox-card-title">${letter.titulo}</span>
+      <span class="mailbox-card-action">Abrir sobre →</span>
+    </button>
+  `).join('');
+
+  const envelopeFront = document.querySelector('.envelope-front');
+  envelopeFront?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openLetter();
+    }
+  });
+}
+
+// 🟢 NUEVAS FUNCIONES PARA ABRIR / CERRAR EL BUZÓN PRINCIPAL
+function openMailbox() {
+  const cover = document.getElementById('mailboxCover');
+  const mailbox = document.getElementById('letterMailbox');
+
+  if (cover) cover.style.display = 'none';
+  if (mailbox) {
+    mailbox.hidden = false;
+    mailbox.style.display = 'block';
+  }
+}
+
+function closeMailbox() {
+  const cover = document.getElementById('mailboxCover');
+  const mailbox = document.getElementById('letterMailbox');
+
+  if (mailbox) {
+    mailbox.style.display = 'none';
+    mailbox.hidden = true;
+  }
+  if (cover) cover.style.display = 'block';
+}
+
+function selectLetter(letterId) {
+  const letter = LOVE_LETTERS.find(item => item.id === letterId);
+  if (!letter) return;
+
+  selectedLetter = letter;
+  const mailbox = document.getElementById('letterMailbox');
+  const envelope = document.getElementById('letterEnvelope');
+  const paper = document.getElementById('letterPaper');
+
+  // Rellenar datos de la carta
+  document.getElementById('letterDate').textContent = letter.fecha;
+  document.getElementById('letterPaperTitle').textContent = letter.titulo;
+  document.getElementById('letterBody').innerHTML = letter.contenido;
+
+  // Ocultar buzón
+  if (mailbox) {
+    mailbox.style.display = 'none';
+    mailbox.hidden = true;
+  }
+
+  // Mostrar el contenedor de la carta y el papel directamente
+  if (envelope) {
+    envelope.hidden = false;
+    envelope.style.display = 'block';
+  }
+
+  // Ocultar la portada del sobre intermedio e ir directo al papel
+  const front = envelope.querySelector('.envelope-front');
+  if (front) front.style.display = 'none';
+  if (paper) paper.style.display = 'block';
+}
+
 function openLetter() {
+  if (!selectedLetter) return;
   document.querySelector('.envelope-front').style.display = 'none';
   const paper = document.getElementById('letterPaper');
   paper.style.display = 'block';
-  paper.style.animation = 'fadeUp 0.6s ease both';
+}
+
+function returnToMailbox() {
+  const mailbox = document.getElementById('letterMailbox');
+  const envelope = document.getElementById('letterEnvelope');
+
+  if (envelope) {
+    envelope.style.display = 'none';
+    envelope.hidden = true;
+  }
+  if (mailbox) {
+    mailbox.hidden = false;
+    mailbox.style.display = 'block';
+  }
 }
 
 function setLetterDate() {
   const el = document.getElementById('letterDate');
-  if (!el) return;
-  const now = new Date();
-  const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-  el.textContent = `${now.getDate()} de ${months[now.getMonth()]} de ${now.getFullYear()}`;
+  if (el && selectedLetter) el.textContent = selectedLetter.fecha;
 }
-
 // ── LÍNEA DEL TIEMPO ──
 function initTimeline() {
   const container = document.getElementById('timelineContainer');
